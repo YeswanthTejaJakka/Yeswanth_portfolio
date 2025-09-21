@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yeswanth-portfolio-weld.vercel.app/sitemap.xml
