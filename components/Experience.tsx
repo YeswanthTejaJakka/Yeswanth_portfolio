@@ -41,7 +41,7 @@ const Experience: React.FC = () => {
                 ))}
             </div>
             <div className="mt-12">
-                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center font-medium leading-tight text-lightest-slate group">
+                 <a href="https://drive.google.com/file/d/1O5MBs8EfaPjDrhGPq5zl2oRho6vFvqku/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center font-medium leading-tight text-lightest-slate group">
                      <span>
                          <span className="border-b border-transparent pb-px transition group-hover:border-brand-green motion-reduce:transition-none">View Full </span>
                          <span className="whitespace-nowrap">
