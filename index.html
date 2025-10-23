@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeswanth Teja — AI & Data Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --logoloop-fadeColorAuto: #ffffff;
+      }
+      .dark {
+        --logoloop-fadeColorAuto: #0b0b0b;
+      }
+      .logoloop {
+        position: relative;
+        overflow-x: hidden;
+        --logoloop-gap: 32px;
+        --logoloop-logoHeight: 28px;
+      }
+      .logoloop--scale-hover {
+        padding-top: calc(var(--logoloop-logoHeight) * 0.1);
+        padding-bottom: calc(var(--logoloop-logoHeight) * 0.1);
+      }
+      .logoloop__track {
+        display: flex;
+        width: max-content;
+        will-change: transform;
+        user-select: none;
+      }
+      .logoloop__list {
+        display: flex;
+        align-items: center;
+      }
+      .logoloop__item {
+        flex: 0 0 auto;
+        margin-right: var(--logoloop-gap);
+        font-size: var(--logoloop-logoHeight);
+        line-height: 1;
+      }
+      .logoloop__item:last-child {
+        margin-right: var(--logoloop-gap);
+      }
+      .logoloop__node {
+        display: inline-flex;
+        align-items: center;
+      }
+      .logoloop__item img {
+        height: var(--logoloop-logoHeight);
+        width: auto;
+        display: block;
+        object-fit: contain;
+        image-rendering: -webkit-optimize-contrast;
+        -webkit-user-drag: none;
+        pointer-events: none;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .logoloop--scale-hover .logoloop__item {
+        overflow: visible;
+      }
+      .logoloop--scale-hover .logoloop__item:hover img,
+      .logoloop--scale-hover .logoloop__item:hover .logoloop__node {
+        transform: scale(1.2);
+        transform-origin: center center;
+      }
+      .logoloop--scale-hover .logoloop__node {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .logoloop__link {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: opacity 0.2s ease;
+      }
+      .logoloop__link:hover {
+        opacity: 0.8;
+      }
+      .logoloop__link:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+      }
+      .logoloop--fade::before,
+      .logoloop--fade::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: clamp(24px, 8%, 120px);
+        pointer-events: none;
+        z-index: 1;
+      }
+      .logoloop--fade::before {
+        left: 0;
+        background: linear-gradient( to right, var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto)) 0%, rgba(0, 0, 0, 0) 100% );
+      }
+      .logoloop--fade::after {
+        right: 0;
+        background: linear-gradient( to left, var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto)) 0%, rgba(0, 0, 0, 0) 100% );
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .logoloop__track {
+          transform: translate3d(0, 0, 0) !important;
+        }
+        .logoloop__item img,
+        .logoloop__node {
+          transition: none !important;
+        }
+      }
+      .liquid-ether-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+      
+      /* Electric Border Effect */
+      @property --angle {
+        syntax: '<angle>';
+        initial-value: 0deg;
+        inherits: false;
+      }
+
+      @keyframes electric-rotation {
+        0% { --angle: 0deg; }
+        100% { --angle: 360deg; }
+      }
+
+      .electric-border::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: -3px; /* Border thickness */
+        border-radius: inherit;
+        background: conic-gradient(
+          from var(--angle),
+          #00F5FF, /* accent-cyan */
+          #A855F7, /* accent-purple */
+          #F472B6, /* accent-pink */
+          #A855F7,
+          #00F5FF
+        );
+        animation: electric-rotation 4s linear infinite;
+        filter: blur(5px); /* Add blur to soften the glow */
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .electric-border:hover::before {
+        opacity: 0.6; /* Reduced opacity for subtlety */
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              'primary': '#0D0D2B', // Dark blue-purple
+              'secondary': '#1E1E3F', // Lighter purple
+              'accent-cyan': '#00F5FF',
+              'accent-purple': '#A855F7',
+              'accent-pink': '#F472B6',
+            },
+            keyframes: {
+              'power-light': {
+                '0%, 100%': { color: '#00F5FF' },
+                '25%': { color: '#A855F7' },
+                '50%': { color: 'white' },
+                '75%': { color: '#F472B6' },
+              },
+              'scroll': {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+               'gradient-bg': {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              },
+            },
+            animation: {
+              'power-light': 'power-light 5s ease-in-out infinite',
+              'scroll': 'scroll 40s linear infinite',
+              'gradient-bg': 'gradient-bg 15s ease infinite',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "framer-motion": "https://esm.sh/framer-motion@10.16.4?external=react,react-dom",
+    "three": "https://esm.sh/three@0.158.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
