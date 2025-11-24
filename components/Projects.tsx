@@ -49,6 +49,8 @@ const projectsData: Project[] = [
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const [isLoaded, setIsLoaded] = React.useState(false);
+
   return (
     <motion.div 
       className="relative electric-border flex-shrink-0 w-80 md:w-96 h-[450px] p-6 rounded-3xl
@@ -56,9 +58,18 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                  group transition-all duration-500"
       whileHover={{ y: -10 }}
     >
-        <div className="absolute top-0 left-0 w-full h-1/2 rounded-t-2xl overflow-hidden">
-            <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-secondary/80 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-1/2 rounded-t-2xl overflow-hidden bg-gray-200 dark:bg-gray-800">
+            {!isLoaded && (
+                <div className="absolute inset-0 animate-pulse bg-gray-300 dark:bg-white/5 z-10" />
+            )}
+            <img 
+                src={project.imageUrl} 
+                alt={project.title} 
+                className={`w-full h-full object-cover transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} 
+                onLoad={() => setIsLoaded(true)}
+                loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-secondary/80 to-transparent pointer-events-none"></div>
         </div>
 
         <div className="relative z-10 flex flex-col justify-end h-full">
