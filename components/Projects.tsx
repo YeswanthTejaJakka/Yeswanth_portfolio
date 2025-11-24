@@ -30,6 +30,22 @@ const projectsData: Project[] = [
     tags: ['JavaScript', 'Browser Extension', 'Security'],
     repoUrl: 'https://github.com/YeswanthTejaJakka',
   },
+  {
+    id: 4,
+    title: 'RISC-V Assembler',
+    description: 'A robust system tool that converts RISC-V assembly code into machine code. Supports varied instruction formats and label resolution, demonstrating a deep understanding of computer architecture and low-level programming.',
+    imageUrl: 'https://i.postimg.cc/NGk2dqgC/Gemini-Generated-Image-1ty7ey1ty7ey1ty7.png',
+    tags: ['C++', 'Assembly', 'Computer Architecture', 'Systems'],
+    repoUrl: 'https://github.com/YeswanthTejaJakka',
+  },
+  {
+    id: 5,
+    title: 'AI Crop Suggestion System',
+    description: 'An intelligent agriculture system recommending optimal crops based on environmental data like weather, soil pH, humidity, and rainfall. Leverages machine learning algorithms to assist farmers in maximizing yield.',
+    imageUrl: 'https://i.postimg.cc/G27wpmF5/Gemini-Generated-Image-qg8l1wqg8l1wqg8l.png',
+    tags: ['Python', 'Machine Learning', 'Data Science', 'Scikit-learn'],
+    repoUrl: 'https://github.com/YeswanthTejaJakka',
+  },
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
@@ -77,7 +93,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 };
 
 const Projects: React.FC = () => {
-  const duplicatedProjects = [...projectsData, ...projectsData, ...projectsData, ...projectsData];
+  const duplicatedProjects = [...projectsData, ...projectsData, ...projectsData];
 
   return (
     <section className="py-20 sm:py-28">
