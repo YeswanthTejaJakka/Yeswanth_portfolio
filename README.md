@@ -1,20 +1,44 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🌐 Yeswanth Teja Jakka — Portfolio
 
-# Run and deploy your AI Studio app
+Welcome to my personal portfolio website:  
+👉 **[yeswanth-portfolio-weld.vercel.app](https://yeswanth-portfolio-weld.vercel.app/)**  
 
-This contains everything you need to run your app locally.
+This website showcases my **projects, skills, and experiences** as an **AI student at IIT Ropar**, with a focus on creativity, interactivity, and modern web aesthetics.
 
-View your app in AI Studio: https://ai.studio/apps/drive/10ktqqScVaxzqeQYghlobVNIVGNFAvCpl
+---
 
-## Run Locally
+## 🚀 Features
 
-**Prerequisites:**  Node.js
+- **🎯 Interactive UI** — Smooth animations and dynamic cursor interactions for an engaging browsing experience.  
+- **🧠 AI & Tech Projects Showcase** — A dedicated projects section with detailed descriptions and live demos.  
+- **🖱️ Floating Widgets** — Highlight effects for the active tab where the cursor points.  
+- **🎞️ Auto-Sliding Project Gallery** — Projects auto-slide and freeze on hover for detailed exploration.  
+- **🌀 Custom Cursor Animation** — Unique cursor theme consistent throughout the site.  
+- **💧 Liquid Background Effect** — Background inspired by [React Bits: Liquid Ether](https://reactbits.dev/backgrounds/liquid-ether).  
+- **🌈 Colorful Typography** — Heading letters with smooth color transitions for a distinctive style.  
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|-----------|---------------|
+| **Frontend** | React.js, Next.js, Tailwind CSS |
+| **Animations** | Framer Motion, React Bits |
+| **Deployment** | Vercel |
+| **Version Control** | Git & GitHub |
+
+---
+
+## 📂 Folder Structure
+
+```bash
+yeswanth-portfolio/
+├── public/           # Static assets (images, icons, etc.)
+├── src/
+│   ├── components/   # Reusable UI components
+│   ├── pages/        # Website pages
+│   ├── styles/       # Tailwind and global CSS
+│   └── utils/        # Helper functions
+├── package.json
+└── README.md
